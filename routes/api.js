@@ -1,5 +1,6 @@
 var express = require('express'),
-    router = express.Router();
+    router = express.Router(),
+    chicksub = require('chicksub');
 
 
 // Middleware
@@ -9,9 +10,26 @@ var postMiddleware = function(req, res, next) {
 
 };
 
+var chickSub = new chicksub();
+
 router.post('/subscribe', function(req, res) {
     try {
-        res.send('subscribe - post');
+        console.log("Request: " + req);
+        var status = 200,
+            resBody = {
+                errors : []
+            },
+            topic = req.body.topic,
+            url = req.body.url;
+
+        chickSub.subscribe(url, topic, function(err, results) {
+            if (err) {
+                status = 400;
+                resBody.errors.push(err.message);
+            }
+            res.status(status).json(resBody);
+        });
+
     } catch (e) {
         console.log(e);
         res.status(500).send();

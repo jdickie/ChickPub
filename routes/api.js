@@ -10,15 +10,30 @@ var postMiddleware = function(req, res, next) {
 };
 
 router.post('/subscribe', function(req, res) {
-    res.send('subscribe - post');
+    try {
+        res.send('subscribe - post');
+    } catch (e) {
+        console.log(e);
+        res.status(500).send();
+    }
 });
 
 router.put('/subscribe', function(req, res) {
-    res.send('subscribe - put');
+    try {
+        res.send('subscribe - put');
+    } catch (e) {
+        console.log(e);
+        res.status(500).send();
+    }
 });
 
 router.all('/subscribe', function(req, res) {
-    res.send('subscribe - all');
+    try {
+        res.send('subscribe - all');
+    } catch (e) {
+        console.log(e);
+        res.status(500).send();
+    }
 });
 
 module.exports = router;

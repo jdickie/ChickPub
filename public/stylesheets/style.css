@@ -1,8 +1,32 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+}
+
+.main {
+    background-color: #f8d5d8;
+    padding: 6px;
 }
 
 a {
   color: #00B7FF;
+}
+
+p {
+    color: #000000;
+    padding-left: 6px;
+    font: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
+h1 {
+    color: #880000;
+}
+
+h2.verb {
+    color: #c09853;
+    padding-left: 6px;
 }

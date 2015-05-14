@@ -5,25 +5,24 @@ html
         link(rel='stylesheet', href='/stylesheets/style.css')
     body
         div.main
-            h1 /api/subscribe
-                p Handles subscribing users to a topic.
-
-            h2.verb POST /api/subscribe
+            h1 /api/publish
+                p Publish to a topic
+            h2.verb POST /api/publish/topic/{topicName}
+                p.desc In query:
+                    
                 p.desc In body:
                 ul
-                    li url - Endpoint that will be sent message to via POST
-                    li topic - topic to register to - must be RESTful and begin with '/topic' (e.g. /topic/mytopic)
+                    li title - String representing the title of the message
+                    li body - String representing text of message
                 p.
                    Returns:
                    Doc model that has errors array, and a results object that should include the registered subscribers'
                     uid to be used in other calls
-
             h2.verb PUT /api/subscribe
                 p In body:
                 ul
                     li uid - from the model that was returned in 'result' from subscribe POST
                     li url - (optional) url to change to for this subscription
                     li topic - (optional) topic to change this subscription to
-
             h2.verb GET /api/subscribe
                 p Takes you to here

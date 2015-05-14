@@ -120,7 +120,7 @@ describe('/unsubscribe', function () {
         });
     });
 });
-describe('/send/:format/:name', function () {
+describe('/publish/:format/:name', function () {
     var testUrl = 'http://messageme.com',
         testTopic = '/topic/test',
         testModel;

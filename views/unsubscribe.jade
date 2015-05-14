@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        div.main
+            h1 /api/unsubscribe
+                p Handles unsubscribing users.
+            h2.verb POST /api/unsubscribe
+                p.desc In body:
+                ul
+                    li uid - from the original subscribe results - use this to refer to subscription to erase
+                p.
+                   Returns:
+                   Doc model that has errors array, and a results object that should include model that was
+                    deleted
+
+            h2.verb GET /api/unsubscribe
+                p Takes you to here

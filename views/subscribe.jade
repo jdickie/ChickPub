@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        div.main
+            h1 /api/subscribe
+                p Handles subscribing users to a topic.
+
+            h2.verb POST /api/subscribe
+                p.desc In body:
+                ul
+                    li url - Endpoint that will be sent message to via POST
+                    li topic - topic to register to - must be RESTful and begin with '/topic' (e.g. /topic/mytopic)
+                p.
+                   Returns:
+                   Doc model that has errors array, and a results object that should include the registered subscribers'
+                    uid to be used in other calls
+
+            h2.verb PUT /api/subscribe
+                p In body:
+                ul
+                    li this...
+
+            h2.verb GET /api/subscribe
+                p Takes you to here

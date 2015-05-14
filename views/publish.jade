@@ -9,20 +9,19 @@ html
                 p Publish to a topic
             h2.verb POST /api/publish/topic/{topicName}
                 p.desc In query:
-                    
+                ul
+                    li topicName - refers to the registered topic
                 p.desc In body:
                 ul
                     li title - String representing the title of the message
                     li body - String representing text of message
-                p.
+                p.returns.
                    Returns:
                    Doc model that has errors array, and a results object that should include the registered subscribers'
                     uid to be used in other calls
-            h2.verb PUT /api/subscribe
-                p In body:
-                ul
-                    li uid - from the model that was returned in 'result' from subscribe POST
-                    li url - (optional) url to change to for this subscription
-                    li topic - (optional) topic to change this subscription to
-            h2.verb GET /api/subscribe
+                    If no subscriptions are found for the topic, returns 500 error
+            h2.verb GET /api/publish/topic/{topicName}
+                p Coming soon
+
+            h2.verb GET /api/publish
                 p Takes you to here

@@ -138,8 +138,34 @@ router.post('/publish/:format/:name', function(req, res) {
             });
 
     } catch (e) {
-        console.log(e);
         res.status(500).send();
+    }
+});
+
+
+router.get('/publish/:format/:name', function(req, res) {
+    try {
+        var format = req.params.format,
+            name = req.params.name,
+            topic = '/' + format + '/' + name,
+            resBody = {
+                errors : [],
+                subscribers : []
+            },
+            status = 200;
+        chickPub.getAllSubscribers(topic, function(err, jsonBody) {
+            if (err) {
+                status = 400;
+                resBody.errors.push(err);
+            }
+
+            resBody = _.extend(resBody, jsonBody);
+            res.status(status).json(resBody);
+        });
+    } catch (e) {
+        res.status(500).json({
+            errors : [e.message]
+        });
     }
 });
 

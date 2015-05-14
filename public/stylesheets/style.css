@@ -15,7 +15,13 @@ a {
 p {
     color: #000000;
     padding-left: 6px;
-    font: 12px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Courier New Verdana", Arial, serif;
+}
+
+p.returns {
+    padding-left:12px;
 }
 
 h1, h2, h3, h4, h5, h6 {

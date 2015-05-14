@@ -18,7 +18,9 @@ router.get('/unsubscribe', function(req, res) {
 });
 
 router.get('/publish', function(req, res) {
-    index();
+    res.render('publish', {
+        title : 'Publish'
+    });
 });
 
 module.exports = router;

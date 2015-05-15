@@ -1,18 +1,18 @@
 body {
-  padding: 50px;
   font: 14px "Helvetica Neue Light", Helvetica, Arial, sans-serif;
+  background-color: #ABDDD9;
 }
 
 .main {
     background-color: #f8d5d8;
-    padding: 6px;
+    padding: 10px;
 }
 
 a {
   color: #00B7FF;
 }
 
-p {
+.main p {
     color: #000000;
     padding-left: 6px;
     font-size: 16px;
@@ -33,6 +33,125 @@ h1 {
 }
 
 h2.verb {
+    font-size: 22px;
     color: #c09853;
     padding-left: 6px;
 }
+
+.main li {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#aboutheader {
+    font-size: 22px;
+    text-transform: uppercase;
+    background-color: #2947e1;
+    position: fixed;
+    top: 0;
+    min-width: 100%;
+    min-height: 10%;
+    padding-bottom: 6px;
+    text-align: center;
+}
+
+#aboutheader h1 {
+    text-align: center;
+    color: #FBD9CA;
+}
+
+#aboutheader span {
+    color: #FFF;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+/** Parallax **/
+#parallax {
+    min-height:100%;
+    background-color: #AA5839;
+    margin-top: 100px;
+}
+
+[class*="bg_"] {
+    min-height: 200px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size : cover;
+}
+
+[class*="bg_"] h1, h2, h3 {
+    padding: 5%;
+    margin:0;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: 800;
+    text-align:right;
+}
+
+[class*="bg_"] p {
+    font-size: 33px;
+}
+
+.bg_coffee {
+    color: #DDDFFF;
+    background-image: url('../images/coffee.png');
+}
+
+.bg_roof {
+    background-image: url('../images/roof.png');
+}
+
+.bg_beach {
+    background-image: url('../images/beach.png');
+}
+
+.bg_falkon {
+    background-image: url('../images/falkon.png');
+}
+
+.bg_white {
+    background-color: #FBD9CA;
+    color: #003B20;
+    min-height:220px;
+    padding: 15px;
+}
+
+.desc {
+    padding: 10px;
+}
+
+.desc p {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.get-started {
+    margin : 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+span.button {
+    background-color: #2947e1;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    min-height: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+span.button a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 400;
+}
+
+span.button:hover {
+    background-color: #000;
+    color: #FFF;
+}
+

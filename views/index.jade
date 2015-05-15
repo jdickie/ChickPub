@@ -1,1 +1,48 @@
 extends layout
+
+block mainContent
+    div#parallax
+        div.bg_falkon
+            h2 About Us
+        div.bg_white
+            dib.desc
+                p.
+                    ChickPub is a way to publish messages to a wide variety of subscribers. We provide a platform for other apps to signup for topics.
+                    Then, all your app has to do is publish to that topic through our service. Everyone gets notified - no one but us has to deal with
+                    who gets what.
+                p.
+                    Starting as a project to investiage PubSub, we have grown to a platform supporting such apps as Succeedstr - the revolutionary TODO list
+                    application.
+                p Our stack uses
+                    a(href='https://nodejs.org') NodeJS,
+                    span
+                    a(href='http://expressjs.com') ExpressJS,
+                    span  and
+                    a(href='http://rethinkdb.com') RethinkDB
+        div.bg_coffee
+            h2 Subscription
+        div.bg_white
+            div.desc
+                p Using our chicksub framework, users from anywhere are able to subscribe to messages. It's as easy as hitting an endpoint!
+            div.get-started
+                span.button
+                    a(href="http://localhost:3000/docs/subscribe") Get Started
+        div.bg_roof
+            h2 Publishing
+        div.bg_white
+            div.desc
+                p To publish or not to publish? No need to worry about that, we handle everything from batching tokens to handling messages
+            div.get-started
+                span.button
+                    a(href="http://localhost:3000/docs/publish") Get Started
+        div.bg_beach
+            h3 Our Philosophy and Lessons Learned
+        div.bg_white
+            div.desc
+                p Philosophy
+                p.
+                 Using ExpressJS to experiment with ideas around PubSub. ExpressJS is an easy way to set up experimental APIs to test out problems.
+                p.
+                  Using Test Driven Development to build APIs to anticipated needs
+                p.
+                    Continuing to think outside the box.

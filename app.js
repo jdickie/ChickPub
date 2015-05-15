@@ -58,9 +58,8 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 app.set('port', config.environment.port);
-var server = app.listen(app.get('port'), function() {
+var server = app.listen(app.get('port'), function () {
     console.log("now listening on port " + server.address().port);
 });
 

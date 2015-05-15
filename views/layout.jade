@@ -2,5 +2,10 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    block aboutHeader
+      div#aboutheader
+        h1= title
+        span A new leader in PubSub Experimental Engines
     block mainContent

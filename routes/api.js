@@ -18,7 +18,6 @@ var chickSub = new chicksub(),
 
 router.post('/subscribe', function(req, res) {
     try {
-        console.log("Request: " + JSON.stringify(req.body));
         var status = 200,
             resBody = {
                 errors : []
